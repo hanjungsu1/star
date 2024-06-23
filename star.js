@@ -58,3 +58,15 @@ function DisplayAll() {
         }
     }
 }
+function CheckDisplayStatus (theBtn) {
+    if (theBtn.value == 'start') {
+        displaystaus = true;
+        theBtn.value = 'stop';
+        displayid = setlnterval("DisplayAll()", 500);
+    }
+    else {
+        displaystatus = false;
+        theBtn.value = 'star';
+        clearTimeout(displayid);
+    }
+}
